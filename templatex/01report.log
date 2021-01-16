@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.9.18)  16 JAN 2021 11:40
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.9.18)  16 JAN 2021 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1032,11 +1032,11 @@ Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 ) (c:/texlive/2020/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
 )
-
-Package gitinfo2 Warning: I can't find the file '.git/gitHeadInfo.gin'.
-(gitinfo2)                All git metadata has been set to '(None)'.
-
-) (c:/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package gitinfo2 Info: gitinfo2 found : ../.git/gitHeadInfo.gin
+(gitinfo2)              on input line 128.
+ (../.git/gitHeadInfo.gin) (c:/texlive/2020/texmf-dist/tex/latex/gitinfo2/gitexinfo.sty
+Package: gitexinfo 2015/11/22 v2.0.7 Auxiliary package for gitinfo2
+)) (c:/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@headwidth=\skip91
 \f@nch@O@elh=\skip92
@@ -1215,10 +1215,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 34256 strings out of 479418
- 671340 string characters out of 5888105
- 1078074 words of memory out of 5000000
- 50964 multiletter control sequences out of 15000+600000
+ 34299 strings out of 479418
+ 672062 string characters out of 5888105
+ 1079842 words of memory out of 5000000
+ 51006 multiletter control sequences out of 15000+600000
  538970 words of font info for 59 fonts, out of 8000000 for 9000
  1509 hyphenation exceptions out of 8191
  71i,12n,102p,965b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
