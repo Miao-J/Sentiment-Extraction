@@ -1,0 +1,7 @@
+\babel@toc {english}{}
+\contentsline {section}{\tocsection {}{1}{Introduction}}{2}{section.1}%
+\contentsline {section}{\tocsection {}{2}{Data Analysis}}{2}{section.2}%
+\contentsline {section}{\tocsection {}{3}{Data Cleaning}}{2}{section.3}%
+\contentsline {section}{\tocsection {}{4}{Data Feature Analysis}}{2}{section.4}%
+\contentsline {section}{\tocsection {}{5}{WordClouds}}{3}{section.5}%
+\contentsline {section}{\tocsection {}{6}{Model}}{3}{section.6}%
