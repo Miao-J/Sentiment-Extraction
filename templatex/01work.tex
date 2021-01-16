@@ -465,7 +465,7 @@ Unique Words in each Segment
 \item
 Unique Words in each Segment
 \item
-By Looking at the Unique Words of each sentiment,we now have much more clarity about the data,these unique words are very strong determiners of Sentiment of tweets
+By Looking at the Unique Words of each sentiment,we now have much more clarity about the data,these unique words are very strong determiners of Sentiment of tweets.
 \end{itemize}
 \vspace{-0.8cm}
 \begin{figure}[htbp]
@@ -501,7 +501,9 @@ By Looking at the Unique Words of each sentiment,we now have much more clarity a
 \begin{slide}[toc=,bm=]{WordClouds}
 \begin{itemize}
 \item
-Word Cloud of Negative Tweets
+Visualize the WordClouds for each emotion so that it can be viewed more intuitively and clearly.
+\item
+WordCloud of Negative Tweets.
 \end{itemize}
 \vspace{-0.8cm}
 \begin{center}
@@ -534,13 +536,13 @@ To use spacy for creating our own customised NER model or models (seperate for e
 \begin{slide}[toc=,bm=]{Train Model-NER}
 \begin{itemize}
 \item
-Set up the pipeline and train the entity recognizer,create the built-in pipeline components and add them to the pipeline
+Set up the pipeline and train the entity recognizer,create the built-in pipeline components and add them to the pipeline.
 \item
-Add labels: entities
+Add labels: entities.
 \item
-get names of other pipes to disable them during training
+Get names of other pipes to disable them during training.
 \item
-The sample can be divided into equal subsets, one gradient descent can be made for each subset, then the values of parameters W and B can be updated, and then the gradient descent can be continued in the next subset.
+The sample can be divided into equal subsets, one gradient descent can be made for each subset, then the values of parameters can be updated, and then the gradient descent can be continued in the next subset.
 \item
 Training models for Positive and Negative tweets.
 \end{itemize}
@@ -578,7 +580,7 @@ Unique Words in each Segment
 \begin{slide}[toc=,bm=]{Model-BERT}
 \begin{itemize}
 \item
-Data analysis, data visualization and data cleaning are all consistent with the above. Bert model is used for prediction, and the accuracy of this model is higher than that of NER model Z in natural language processing.
+Data analysis, data visualization and data cleaning are all consistent with the above. BERT model is used for prediction, and the accuracy of this model is higher than that of NER model in NLP.
 \end{itemize}
 \end{slide}
 
@@ -589,7 +591,7 @@ Data analysis, data visualization and data cleaning are all consistent with the 
 \begin{slide}[toc=,bm=]{Train Model-BERT}
 \begin{itemize}
 \item
-The Jaccard socre of training iteration 5 times.
+The data was divided into 5 parts of the same size, and each part was trained for 3 iterations to get the best Jaccard Score.
 \end{itemize}
 \begin{center}
   \includegraphics[width=1.0\linewidth,height=.1\linewidth]{C:/FLIP01report/picture/jaccard-BERT.eps}
