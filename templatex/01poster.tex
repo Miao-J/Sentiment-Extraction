@@ -1,0 +1,261 @@
+%%
+%% This is file `tikzposter-template.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% tikzposter.dtx  (with options: `tikzposter-template.tex')
+%%
+%% This is a generated file.
+%%
+%% Copyright (C) 2014 by Pascal Richter, Elena Botoeva, Richard Barnard, and Dirk Surmann
+%%
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 2.0 of this license or (at your option) any later
+%% version. The latest version of this license is in:
+%%
+%% http://www.latex-project.org/lppl.txt
+%%
+%% and version 2.0 or later is part of all distributions of
+%% LaTeX version 2013/12/01 or later.
+%%
+
+
+\documentclass{tikzposter} %Options for format can be included here
+
+\usepackage{todonotes}
+
+\usepackage[tikz]{bclogo}
+\usepackage{lipsum}
+\usepackage{amsmath}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[absolute]{textpos}
+\usepackage[it]{subfigure}
+\usepackage{graphicx}
+\usepackage{cmbright}
+%\usepackage[default]{cantarell}
+%\usepackage{avant}
+%\usepackage[math]{iwona}
+\usepackage[math]{kurier}
+\usepackage[T1]{fontenc}
+
+
+%% add your packages here
+\usepackage{hyperref}
+% for random text
+\usepackage{lipsum}
+\usepackage[english]{babel}
+\usepackage[pangram]{blindtext}
+
+\colorlet{backgroundcolor}{blue!10}
+
+ % Title, Author, Institute
+\title{Flip 01 Project Report}
+\author{Jing Miao}
+\institute{Qingdao University of Technology, China}
+%\titlegraphic{logos/tulip-logo.eps}
+
+%Choose Layout
+\usetheme{Wave}
+
+%\definebackgroundstyle{samplebackgroundstyle}{
+%\draw[inner sep=0pt, line width=0pt, color=red, fill=backgroundcolor!30!black]
+%(bottomleft) rectangle (topright);
+%}
+%
+%\colorlet{backgroundcolor}{blue!10}
+
+\begin{document}
+
+
+\colorlet{blocktitlebgcolor}{blue!23}
+
+ % Title block with title, author, logo, etc.
+\maketitle
+
+\begin{columns}
+ % FIRST column
+\column{0.5}% Width set relative to text width
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+ %\block{Main Objectives}{
+%  	      	\begin{enumerate}
+%  	      	\item Formalise research problem by extending \emph{outlying aspects mining}
+%  	      	\item Proposed \emph{GOAM} algorithm is to solve research problem
+%  	      	\item Utilise pruning strategies to reduce time complexity
+%  	      	\end{enumerate}
+%%  	      \end{minipage}
+%}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Introduction}{
+    With all of the tweets circulating every second it is hard to tell whether the sentiment behind a specific tweet will impact a company,
+    or a person's, brand for being viral (positive),
+    or devastate profit because it strikes a negative tone.
+    Capturing sentiment in language is important in these times where decisions and reactions are created and updated in seconds.
+    The purpose of this task is to detect hate speech in tweets. For the sake of simplicity, if there is racist or sexist sentiment on Twitter, we will say that it contains hate speech. Therefore, the task is to classify racist or sexist tweets from other tweets.
+    If there is a system that can detect this type of text, it will definitely make the Internet and social media a better, non-malicious communication space.
+ 	
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Data Analysis}{
+\begin{itemize}
+    \item
+    View the data of the training data set and the test data set,
+    in which the training data set contains text ID, text,
+    extracted text (the original text reflects the emotion part),
+    emotion classification;The test set contains text ID, text, sentiment classification.
+    \item
+    There are 27481 pieces of data in the training set,
+    among which one text and extracted text data are empty.
+    The emotion classification is divided into three parts: positive,
+    negative and neutral.By drawing Funnel-Chart to count the proportion of texts under different sentiment classification,
+    it can be concluded that,the neutral sentiment accounted for the majority,
+    followed by the positive and the least negative.
+    \item
+    So further analysis is needed to check the difference in Number of Words and the Jaccard Scores similarity across Different Sentiments between Text and selected text.
+    We can do that by visualizing the data,It can be seen that the number of tweets with a Jaccard similarity of 1 between text extraction and text is more neutral sentiment.
+    In conclusion maybe we can use neutral text as it is for selected text in test data submission.
+    We can see from the Jaccard Score Plot that there is peak for negative and positive plot around score of 1.
+    That means there is a cluster of tweets where there is a high similarity between text and selected texts,
+    if we can find those clusters then we can predict text for selected texts for those tweets irrespective of segment.
+\end{itemize}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+%\note{Note with default behavior}
+
+%\note[targetoffsetx=12cm, targetoffsety=-1cm, angle=20, rotate=25]
+%{Note \\ offset and rotated}
+
+ % First column - second block
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Data Cleaning}{
+  	First,make text lowercase,remove text in square brackets,remove links,
+    remove punctuation and remove words containing numbers.Then to remove the stopwords.
+    We can see that the top 20 most common words and the text in the selected text are almost the same.
+
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+% SECOND column
+\column{0.5}
+ %Second column with first block's top edge aligned with with previous column's top.
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block{Data Feature Analysis}{
+\begin{itemize}
+    \item
+    Find unique word (a word to represent some kind of emotional),
+    according to the classification of emotional all words in the text can be divided into three collections,
+    there must be some words also belong to the positive,
+    negative and neutral or both of the three,
+    there must be some words also belongs to a collection of emotion,
+    then these terms can be used as the only word on behalf of a certain emotion.
+    \item
+    By Looking at the Unique Words of each sentiment,we now have much more clarity about the data,
+    these unique words are very strong determiners of Sentiment of tweets.
+
+\end{itemize}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+% Second column - first block
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block[titleleft]{WordClouds}
+{
+\begin{itemize}
+  	\item
+    By drawing the word cloud,
+    the words in the original text can be viewed more clearly,
+    and the words of different emotional categories can be viewed more clearly and intuitively.
+\end{itemize}
+
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+% Second column - second block
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\block[titlewidthscale=1, bodywidthscale=1]
+{Model}
+{
+\begin{itemize}
+  \item
+  Two training models were used for testing, namely NER and BERT.
+  \item
+  Through the training of NER model,
+  the test text obtained contains some non-text data such as web addresses,
+  which leads to unsatisfactory test results.
+  Compared with the NER model,
+  the BERT model has a higher testing accuracy,
+  and the extracted text can reflect the emotion category of the original text.
+
+\end{itemize}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+% Bottomblock
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+\colorlet{notebgcolor}{blue!20}
+\colorlet{notefrcolor}{blue!20}
+
+
+%\note[targetoffsetx=8cm, targetoffsety=-10cm,rotate=0,angle=180,radius=8cm,width=.46\textwidth,innersep=.1cm]{
+%Acknowledgement
+%}
+
+%\block[titlewidthscale=0.9, bodywidthscale=0.9]
+%{Acknowledgement}{
+%}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+\end{columns}
+
+
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+%[titleleft, titleoffsetx=2em, titleoffsety=1em, bodyoffsetx=2em,%
+%roundedcorners=10, linewidth=0mm, titlewidthscale=0.7,%
+%bodywidthscale=0.9, titlecenter]
+
+%\colorlet{noteframecolor}{blue!20}
+\colorlet{notebgcolor}{blue!20}
+\colorlet{notefrcolor}{blue!20}
+\note[targetoffsetx=-13cm, targetoffsety=-30cm,rotate=0,angle=180,radius=8cm,width=.96\textwidth,innersep=.4cm]
+{
+\begin{minipage}{0.3\linewidth}
+\centering
+\includegraphics[width=24cm]{logos/tulip-wordmark.eps}
+\end{minipage}
+\begin{minipage}{0.7\linewidth}
+{ \centering
+ The $11^{th}$ International Conference on Knowledge Science,
+  Engineering and Management (KSEM 2018),
+  17-19/08/2018, Changchun, China
+}
+\end{minipage}
+}
+%%%%%%%%%% -------------------------------------------------------------------- %%%%%%%%%%
+
+
+\end{document}
+
+%\endinput
+%%
+%% End of file `tikzposter-template.tex'.

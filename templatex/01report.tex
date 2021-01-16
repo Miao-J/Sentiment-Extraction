@@ -1,0 +1,55 @@
+\documentclass{amsart}
+\synctex=1
+
+%=================================================================
+%
+\newcount\DraftStatus  % 0 suppresses notes to selves in text
+\DraftStatus=1   % TODO: set to 0 for final version
+%=================================================================
+
+%=================================================================
+\usepackage{comment}
+%=================================================================
+%
+\includecomment{JournalOnly}
+\includecomment{ConferenceOnly}
+\includecomment{TulipStyle}
+%
+%=================================================================
+\input{preamble}
+
+
+%=================================================================
+%
+\begin{document}
+%
+%=================================================================
+%
+\title[Flip 01 Project Report]{Flip 01 Project Report}%
+
+\author{Jing Miao}
+\address[A.~1]{School of Computer Science,\\
+Qingdao University of Technology, Qingdao, China}%
+
+
+%\thanks{Thanks to \ldots}%
+\keywords{Data Analysis, Data Visualization,Data Cleaning,Model}%
+\date{\gitAuthorDate}%
+
+\begin{abstract}
+With all of the tweets circulating every second it is hard to tell whether the sentiment behind a specific tweet will impact a company,or a person's, brand for being viral (positive),or devastate profit because it strikes a negative tone.Analyze the text data of tweets, find the data features, and use the natural language processing model to detect the text that affects the semantics in tweets.If there is a system that can detect this type of text, it will definitely make the Internet and social media a better, non-malicious communication space.
+\end{abstract}
+
+\maketitle
+\tableofcontents
+
+\newpage
+%=================================================================
+
+\input{mainbody}
+
+
+
+
+\end{document}
+
